@@ -11,7 +11,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://www.aaronsaarela.net/blog',
-        mail: {},
+	mail: {
+    	    transport: 'SMTP',
+    	    options: {
+       	        service: 'Gmail',
+                auth: {
+                    user: 'aaron.saarela@gmail.com',
+                    pass: 'pbrmeyzloyrzvuvh'
+                }
+            }
+        },
         database: {
             client: 'sqlite3',
             connection: {
